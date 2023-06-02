@@ -8,7 +8,7 @@ on:
       - main
 jobs:
   my_testing:
-    runs-on: [ubuntu-lasstest]
+    runs-on: [ubuntu-latest]
     
     steps:
       - name: Print nice message

@@ -11,10 +11,18 @@ jobs:
     steps:
       - name: Print nice message
         run: echo "Hello World"
+      - name: Execute few commands
+        run: |
+          echo "Hello message1"
+          echo "Hello message2"
         
   my_deploy:
     runs-on: [ubuntu-latest]
+    needs: [my_testing]
     
     steps:
       - name: Print nice message from Deploy Job
         run: echo "Hello World from Deploy"
+        
+      - name: List current folder
+        run: ls -la

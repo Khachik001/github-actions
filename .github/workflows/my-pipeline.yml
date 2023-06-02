@@ -57,5 +57,11 @@ jobs:
         run: echo "This is local varaiable $LOCAL_VAR1"
         env:
           LOCAL_VAR1 : "Hello I`am local variable"
-          
+       
+      - name: Check if command exist
+        run: aws --version
+        
+      - name: Check if ZIP exist
+        run: zip --version
+      
         
